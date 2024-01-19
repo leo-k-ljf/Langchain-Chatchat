@@ -9,12 +9,12 @@ HTTPX_DEFAULT_TIMEOUT = 300.0
 OPEN_CROSS_DOMAIN = False
 
 # 各服务器默认绑定host。如改为"0.0.0.0"需要修改下方所有XX_SERVER的host
-DEFAULT_BIND_HOST = "0.0.0.0" if sys.platform != "win32" else "127.0.0.1"
+DEFAULT_BIND_HOST = "127.0.0.1" if sys.platform != "win32" else "127.0.0.1"
 
 # webui.py server
 WEBUI_SERVER = {
     "host": DEFAULT_BIND_HOST,
-    "port": 8501,
+    "port": 8502,
 }
 
 # api.py server

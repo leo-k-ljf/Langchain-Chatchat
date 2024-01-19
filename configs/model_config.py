@@ -9,7 +9,7 @@ MODEL_ROOT_PATH = "E:\py\Langchain-Chatchat\models"
 EMBEDDING_MODEL = "bge-large-zh"
 
 # Embedding 模型运行设备。设为"auto"会自动检测，也可手动设定为"cuda","mps","cpu"其中之一。
-EMBEDDING_DEVICE = "cuda"
+EMBEDDING_DEVICE = "auto"
 
 # 选用的reranker模型
 RERANKER_MODEL = "bge-reranker-large"
@@ -28,13 +28,13 @@ EMBEDDING_MODEL_OUTPUT_PATH = "output"
 
 # chatglm3-6b输出角色标签<|user|>及自问自答的问题详见项目wiki->常见问题->Q20.
 
-LLM_MODELS = ["Qwen-1_8B-Chat"]  # "Qwen-1_8B-Chat",
+LLM_MODELS = ["qwen-api"]  # "Qwen-1_8B-Chat",
 
 # AgentLM模型的名称 (可以不指定，指定之后就锁定进入Agent之后的Chain的模型，不指定就是LLM_MODELS[0])
 Agent_MODEL = None
 
 # LLM 运行设备。设为"auto"会自动检测，也可手动设定为"cuda","mps","cpu"其中之一。
-LLM_DEVICE = "cuda"
+LLM_DEVICE = "auto"
 
 # 历史对话轮数
 HISTORY_LEN = 3
@@ -103,7 +103,7 @@ ONLINE_LLM_MODEL = {
     # 阿里云通义千问 API，文档参考 https://help.aliyun.com/zh/dashscope/developer-reference/api-details
     "qwen-api": {
         "version": "qwen-turbo",  # 可选包括 "qwen-turbo", "qwen-plus"
-        "api_key": "",  # 请在阿里云控制台模型服务灵积API-KEY管理页面创建
+        "api_key": "sk-3e451261eb724ddda9e5ba98cdcab3ea",  # 请在阿里云控制台模型服务灵积API-KEY管理页面创建
         "provider": "QwenWorker",
         "embed_model": "text-embedding-v1" # embedding 模型名称
     },
