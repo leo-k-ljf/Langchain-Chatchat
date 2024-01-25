@@ -9,7 +9,7 @@ MODEL_ROOT_PATH = "E:\py\Langchain-Chatchat\models"
 EMBEDDING_MODEL = "bge-large-zh"
 
 # Embedding 模型运行设备。设为"auto"会自动检测，也可手动设定为"cuda","mps","cpu"其中之一。
-EMBEDDING_DEVICE = "auto"
+EMBEDDING_DEVICE = "mps"
 
 # 选用的reranker模型
 RERANKER_MODEL = "bge-reranker-large"
@@ -34,7 +34,7 @@ LLM_MODELS = ["qwen-api"]  # "Qwen-1_8B-Chat",
 Agent_MODEL = None
 
 # LLM 运行设备。设为"auto"会自动检测，也可手动设定为"cuda","mps","cpu"其中之一。
-LLM_DEVICE = "auto"
+LLM_DEVICE = "mps"
 
 # 历史对话轮数
 HISTORY_LEN = 3
